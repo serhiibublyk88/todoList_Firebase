@@ -1,0 +1,115 @@
+:root {
+  background-color: #333; /* Фон всего приложения */
+  color: #ffffff; /* Белый текст */
+  font-family: 'Century Gothic', Arial, sans-serif;
+}
+
+.app {
+  background-color: #333; /* Темный фон */
+  color: #ffffff; /* Белый текст */
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  max-width: 800px; /* Ограничим максимальную ширину */
+  margin: 0 auto; /* Центрируем приложение по горизонтали */
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.todoList {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.todoItem {
+  display: flex;
+  justify-content: space-between;
+  
+  border-bottom: 1px solid #444;
+  align-items: center;
+}
+
+.todoTitle {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.completed {
+  color: #4caf50; /* Зеленый для завершенных задач */
+}
+
+.notCompleted {
+  color: #f44336; /* Красный для незавершенных задач */
+}
+
+button {
+  background-color: #1e1e1e; /* Темный фон кнопок */
+  color: #ffffff; /* Белый текст */
+  border: none;
+  border-radius: 4px;
+  padding: 0 15px; /* Убираем вертикальные отступы */
+  margin-left: 10px;
+  
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s; /* Плавные переходы */
+  white-space: nowrap; /* Запрет переноса текста */
+  height: 39px; /* Высота кнопки */
+  border: 1px solid #444;
+}
+
+button:hover {
+  background-color: #333; /* Более светлый фон при наведении */
+  border: 1px solid #757070;
+  
+}
+
+button:active {
+  transform: scale(0.95); /* Уменьшение кнопки при нажатии */
+}
+
+input[type="text"] {
+  width: calc(100% - 20px); /* Учтем отступы */
+  height: 40px; /* Высота инпута */
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #444;
+  border-radius: 4px;
+  background-color: #1e1e1e;
+  color: #ffffff;
+  box-sizing: border-box; /* Учитываем отступы и границы в ширине */
+  margin-left: 10px;
+}
+
+input[type="text"]::placeholder {
+  color: #aaa; /* Цвет плейсхолдера */
+}
+
+
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(51, 51, 51, 0.8); /* Полупрозрачный серый фон */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Обеспечим, что фон будет выше остальных элементов */
+}
+
+.loadingMessage {
+  color: white;
+  font-size: 24px;
+}
